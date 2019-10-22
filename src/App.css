@@ -1,22 +1,47 @@
-.App {
-  text-align: center;
-}
+* {box-sizing: border-box;}
 
-.App-logo {
-  height: 40vmin;
-}
+body{font-family:Arial, Helvetica, sans-serif;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.App {text-align: center;}
 
-.App-link {
-  color: #09d3ac;
-}
+.App-logo {height: 40vmin;}
+
+.App-header {background-color: #f1f1f1;min-height: 100vh;display: flex;flex-direction: row;align-items: center;justify-content: center;color: #5a5a5a;}
+
+.App-link {color: #09d3ac;}
+
+table {width:100%;border-spacing: 0px;margin-bottom: 21px;}
+
+th {text-transform: uppercase;padding: 10px 0px;font-size: 14px;color: #2d768c;}
+
+td {border-top: 1px dashed #c7c7c7;padding: 10px 0px;font-size: 14px;}
+
+.list-wrap {display: block;width: 100%;max-width: 1000px;padding: 42px;}
+
+.add_new {display: block;width: 100%;padding: 0px 17px;max-width: 1000px;text-align: left;}
+
+.add_new_form{width:100%;}
+
+.add_new_form input[type="text"],
+.add_new_form input[type="number"]{
+  width: 225px;
+  padding: 10px;
+  margin-bottom: 11px;
+  border: 1px solid #c5c5c5;
+  background: #fff !important;}
+
+.add_new_form input[type="submit"] {padding: 11px 29px;margin-bottom: 11px;border: 1px solid #1a5161;background: #2f829a;color: #fff;text-transform: uppercase;font-weight: bold;cursor: pointer;margin-top: 6px;}
+
+.sidebar {background: #e4e4e4;width: 100%;max-width: 280px;padding: 24px 10px;}
+
+h2 {font-size: 17px;color: #2d768c;border-bottom: 1px solid #2f829a;margin-bottom: 15px;padding: 5px;text-align: left;}
+
+.sort_name {padding: 8px 15px;border: 1px solid #1a5161;background: #2f829a;color: #fff;text-transform: uppercase;font-weight: bold;cursor: pointer;margin-right:5px;}
+
+.main-content {width: 100%;max-width: 800px;}
+
+.remove {background: #ffcbcb;color: #960000;border-radius: 21px;border: 1px solid #a00606;padding: 5px 10px;font-size: 12px;font-weight: 600;cursor: pointer;}
+
+h1{margin: 0;color: #2f829a;letter-spacing: -1px;}
+
+p {font-size: 14px;line-height: 17px;}
