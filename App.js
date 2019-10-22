@@ -1,7 +1,8 @@
 import React from 'react';
-
+import uuid from 'uuid';
 import './App.css';
 import PetList from './components/PetList';
+import AddPet from './components/AddPet';
 
 
 class App extends React.Component {
@@ -47,13 +48,26 @@ class App extends React.Component {
     this.setState({ pets: [...this.state.pets.filter(pet => pet.id !== id)] });
   }
 
+  //Add Pet
+  addPet = (name,age,type) =>{
+    const newPet={
+      id: uuid.v4(),
+      name: name,
+      age: age,
+      type: type
+    }
+    this.setState({ pets: [...this.state.pets, newPet] })
+  }
+
 
   render() {
     return (
       <div className="App">
 
         <div className="App-header">
-
+        <div className="sidebar">
+            <AddPet addPet={this.addPet} />
+          </div>
           <div className="main-content">
           <h1>OUR PET LIST</h1>
           <p>Below are a list of pets with their name, age and type.</p>
