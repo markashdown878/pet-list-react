@@ -1,26 +1,64 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import PetList from './components/PetList';
+
+
+class App extends React.Component {
+  
+  state = {
+    pets: [
+      {
+          "id": 1,
+          "name": "Leanne",
+          "age": "34",
+          "type": "dog"
+      },
+      {
+          "id": 2,
+          "name": "Ervin",
+          "age": "64",
+          "type": "dog"
+      },
+      {
+          "id": 3,
+          "name": "Clementine",
+          "age": "74",
+          "type": "cat"
+      },
+      {
+          "id": 4,
+          "name": "Patricia",
+          "age": "24",
+          "type": "cat"
+      },
+      {
+          "id": 5,
+          "name": "Chelsey",
+          "age": "18",
+          "type": "dog"
+      }
+
+    ],
+  }
+
+
+  render() {
+    return (
+      <div className="App">
+
+        <div className="App-header">
+
+          <div className="main-content">
+          <h1>OUR PET LIST</h1>
+          <p>Below are a list of pets with their name, age and type.</p>
+            <PetList petList={this.state.pets}/>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
 }
 
 export default App;
